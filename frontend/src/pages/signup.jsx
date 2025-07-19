@@ -24,7 +24,7 @@ function Signup() {
         <Input onChange={(e)=> setPW(e.target.value)} label="password" placeholder="password@123"/>
         <div className='pt-3 pl-20 text-red-600'>{res?res:""}</div>
         <Button onClick={async()=>{
-          const response=await axios.post("http://localhost:3000/api/v1/user/signup",{
+          const response=await axios.post("https://paywallet-backend-7kxw.onrender.com/api/v1/user/signup",{
             lastName,
             firstName,
             username,

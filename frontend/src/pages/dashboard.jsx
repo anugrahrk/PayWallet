@@ -12,7 +12,7 @@ function Dashboard() {
   const name=searchparams.get("name")
   const token=localStorage.getItem("token")
   useEffect( ()=>{
-    axios.get("http://localhost:3000/api/v1/user/bulk?filter="+filter.toLowerCase(),{
+    axios.get("https://paywallet-backend-7kxw.onrender.com/api/v1/user/bulk?filter="+filter.toLowerCase(),{
       headers:{
         authorization:`Bearer ${token}`
       }}
@@ -23,7 +23,7 @@ function Dashboard() {
     
   },[filter])
   useEffect(()=>{
-    axios.put("http://localhost:3000/api/v1/account/balance",{},{
+    axios.put("https://paywallet-backend-7kxw.onrender.com/api/v1/account/balance",{},{
       headers:{
         authorization:`Bearer ${token}`
       }

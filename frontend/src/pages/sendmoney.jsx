@@ -40,7 +40,7 @@ function Sendmoney() {
         <div className='pt-5 pb-5 pl-13 '><input onChange={(e)=> setAmount(e.target.value)} placeholder='amount' type='number' className='w-50 h-10 shadow-lg rounded-lg p-2 border border-slate-300'></input></div>
         <div className='pl-3'><Sucess/></div>
         <div className='pl-25'><button onClick={()=>{
-          axios.post("http://localhost:3000/api/v1/account/transfer",{
+          axios.post("https://paywallet-backend-7kxw.onrender.com/api/v1/account/transfer",{
             to:id,
             amount,
           },{
