@@ -1,5 +1,7 @@
 const express=require("express")
 const app=express()
+const port=process.env.PORT || 8080
+
 const MainRoute=require("./routes/index")
 
 const cors=require("cors")
@@ -10,5 +12,4 @@ app.use("/api/v1",MainRoute)
 
 
 
-
-app.listen(3000)
+app.listen(port)
