@@ -15,24 +15,18 @@ function App() {
       <Routes>
         <Route path="/signup" name="Signup" element={<Signup/>}/>
         <Route path="/signin" element={
-          <PublicRoute>
-          <Signin/>
-          </PublicRoute>
+         <Signin/>
           }/>
         <Route path="/dashboard" element={
-          <PrivateRoute>
+
             <Dashboard/>
-            </PrivateRoute>
+
           
           
           }/>
         <Route path="/send" element={
-          <PrivateRoute>
             <Sendmoney/>
-          </PrivateRoute>
-          
-          
-          
+
           }/>
         <Route path="/" element={<Signup/>}/>
       </Routes>
