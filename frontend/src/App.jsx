@@ -4,6 +4,8 @@ import Signup from './pages/signup'
 import Signin from './pages/Signin'
 import Dashboard from './pages/dashboard'
 import Sendmoney from './pages/sendmoney'
+import PublicRoute from './components/PublicRoute'
+import PrivateRoute from './components/PrivateRoute'
 
 
 function App() {
@@ -12,9 +14,26 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/signup" name="Signup" element={<Signup/>}/>
-        <Route path="/signin" element={<Signin/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/send" element={<Sendmoney/>}/>
+        <Route path="/signin" element={
+          <PublicRoute>
+          <Signin/>
+          </PublicRoute>
+          }/>
+        <Route path="/dashboard" element={
+          <PrivateRoute>
+            <Dashboard/>
+            </PrivateRoute>
+          
+          
+          }/>
+        <Route path="/send" element={
+          <PrivateRoute>
+            <Sendmoney/>
+          </PrivateRoute>
+          
+          
+          
+          }/>
         <Route path="/" element={<Signup/>}/>
       </Routes>
       </BrowserRouter>
