@@ -1,6 +1,5 @@
 const mongoose=require("mongoose")
-const { minLength, lowercase } = require("zod/v4")
-const { required } = require("zod/v4-mini")
+
 mongoose.connect("mongodb+srv://anugrahrk6:VTsSdSad9mNALQC@cluster0.ojaoz3b.mongodb.net/paytm")
 
 const PaytmSchema=new mongoose.Schema({

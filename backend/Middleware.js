@@ -1,6 +1,6 @@
 const JWT_SECRET=require("./config")
 const jwt=require("jsonwebtoken")
-const AuthMware=(req,res,next)=>{
+const AuthMware=(req,res,next)=>{   
     const authheader=req.headers.authorization
     if(!authheader || !authheader.startsWith("Bearer ")){
         return res.status(403).json({
