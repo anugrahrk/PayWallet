@@ -59,7 +59,7 @@ function User({user}) {
 
  
   return (
-    <div className='pl-20 pr-20 flex justify-between'>
+    <div className='md:pl-20 md:pr-20 p-3  flex justify-between'>
         <div className='flex'>
             <div className='bg-emerald-200 rounded-full w-8 h-8 pl-2.5 pt-0.5 text-blue-700 text-lg'>{user.firstName[0].toUpperCase()}</div>
             <div className='font-medium text-lg font-sans pl-4 flex justify-center'>{user.firstName}</div>
